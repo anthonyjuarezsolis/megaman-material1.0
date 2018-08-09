@@ -1,0 +1,12 @@
+<mat-card>
+    Post > List
+    </mat-card>
+    <mat-list role="list">
+        <mat-list-item 
+            role="listitem"
+            *ngFor="let value of posts ">
+                {{value.title}} - {{value.categories}} - {{value.content}}
+            <button mat-raised-button (click)="deletePost(value.id)" >Delete</button>   
+            <button mat-raised-button (click)="onSubmit(value.id)" >Detail</button>   
+            </mat-list-item>
+    </mat-list>
