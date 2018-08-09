@@ -31,9 +31,10 @@ export class PostListComponent implements OnInit {
                 );
     }
 
-    public onSubmit(id: number) {
-        this.postService.byIdPost(id).
-            subscribe(data => this.router.navigate(['/posts/detail/id']));
+    public redirectPageDetail(id: number) {
+        //this.router.navigate
+        //this.postService.byIdPost(id).
+            //subscribe(data => this.router.navigate(['/posts/detail/id']));
     }
 
 }

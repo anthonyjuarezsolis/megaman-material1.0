@@ -19,7 +19,7 @@ const routes: Routes = [
       component: PostAddComponent
      },
      {
-      path: 'detail/id',
+      path: 'detail/:id',
       component: PostDetailComponent
      }
    ]
