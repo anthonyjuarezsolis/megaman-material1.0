@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { PostService } from '../post.service';
+import { ActivatedRoute } from '../../../../node_modules/@angular/router';
 
 @Component({
     selector: 'app-post-detail',
@@ -8,12 +9,23 @@ import { PostService } from '../post.service';
 export class PostDetailComponent {
 
     public post = {};
-    constructor(private postService: PostService) {
-
+    constructor(
+        private postService: PostService,
+        private route: ActivatedRoute
+    ) {
+        this.getPost();
     }
 
     getPost() {
-        this.postService.byIdPost(10)
-            .subscribe(post => console.log(post));
+
+        this.route.params.subscribe( data => {
+            console.log(data);
+            this.postService.byIdPost(data.id)
+            .subscribe(post => {
+                console.log(post);
+                this.post = post;
+            });
+        })
+        
     }
 }

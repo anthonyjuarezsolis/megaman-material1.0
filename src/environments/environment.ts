@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_url: 'https://reduxblog.herokuapp.com/api/'
+  api_url: 'https://reduxblog.herokuapp.com/api'
 };
 
 /*
