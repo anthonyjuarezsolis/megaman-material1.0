@@ -25,7 +25,6 @@ export class PostDetailComponent {
                 console.log(post);
                 this.post = post;
             });
-        })
-        
+        });
     }
 }
